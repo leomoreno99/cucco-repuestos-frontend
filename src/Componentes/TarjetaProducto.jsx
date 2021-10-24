@@ -8,11 +8,29 @@ import Typography from "@mui/material/Typography";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import img from "../img/volante-corona.jpg";
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
+import { makeStyles } from '@mui/styles';
+
+const useStyle = makeStyles({
+  cardA: {
+    disableSpacing:"true",
+     justifyContent:"space-between"
+  }
+})
 
 export default function TarjetaProducto() {
+
+  const classes = useStyle();
+
   return (
-    <Card sx={{ maxWidth: 345, mb:"80px" }}>
-      <CardMedia component="img" height="250" image={img} alt="volante-corona" />
+    <Card sx={{ maxWidth: 345, mb: "80px" }}>
+      <CardMedia
+        component="img"
+        height="250"
+        image={img}
+        alt="volante-corona"
+      />
       <CardContent>
         <Typography align="left" variant="body2" color="text.secondary">
           Volante motor con corona
@@ -21,16 +39,13 @@ export default function TarjetaProducto() {
           $3500.00
         </Typography>
       </CardContent>
-      <CardActions disableSpacing="true" justifyContent="space-around">
+      <CardActions className={classes.cardA} >
+      <Stack spacing={1}>
+          <Rating name="half-rating" defaultValue={2.5} precision={0.5} size="small" readOnly />
+        </Stack>
         <IconButton aria-label="add to cart">
           <AddShoppingCartOutlinedIcon />
         </IconButton>
-
-        <StarOutlinedIcon fontSize="largue" />
-        <StarOutlinedIcon fontSize="largue" />
-        <StarOutlinedIcon fontSize="largue" />
-        <StarOutlinedIcon fontSize="largue" />
-        <StarOutlinedIcon fontSize="largue" />
       </CardActions>
     </Card>
   );

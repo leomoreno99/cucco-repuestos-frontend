@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Inicio from './Paginas/Inicio';
 import { ThemeProvider } from '@emotion/react';
 import theme from './temaConfig';
+import Nosotros from './Paginas/Nosotros';
 
 function App() {
   
@@ -10,6 +11,10 @@ function App() {
     <ThemeProvider theme={theme}>
     <BrowserRouter>
     <Switch>
+
+      <Route path="/nosotros">
+        <Nosotros />
+      </Route>
 
       <Route path="/">
         <Inicio />
