@@ -51,6 +51,7 @@ const Nosotros = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </Typography>
+
             </Item>
           </Grid>
           <Grid item xs={6}>
@@ -77,20 +78,16 @@ const Nosotros = () => {
             </Item>
           </Grid>
           <Grid item xs={6}>
-            <Item>
-              <Item>
                 <Item>
                   <img src={img2} width="100%" alt="" />
                 </Item>
-              </Item>
-            </Item>
+              
           </Grid>
           <Grid item xs={6}>
-            <Item>
               <Item>
                 <img src={img3} width="100%" alt="" />
               </Item>
-            </Item>
+          
           </Grid>
           <Grid item xs={6}>
             <Item>
@@ -115,7 +112,11 @@ const Nosotros = () => {
               </Typography>
             </Item>
           </Grid>
-        </Grid>
+        
+   
+       
+          </Grid>
+
       </Box>
       <Footer />
     </>
