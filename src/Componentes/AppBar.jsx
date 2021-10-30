@@ -16,6 +16,8 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Button, Stack } from "@mui/material";
+import BotonSecundario from "./BotonSecundario";
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -203,12 +205,8 @@ export default function NavBar() {
           </Box>
 
           <Stack direction="row" spacing={2}>
-            <Button color="secondary" variant="outlined" href="/nosotros">
-              Nosotros
-            </Button>
-            <Button color="secondary" variant="outlined">
-              Iniciar sesión
-            </Button>
+          <BotonSecundario texto="Nosotros" alto="39px"></BotonSecundario>
+          <BotonSecundario texto="Iniciar sesión" alto="39px"></BotonSecundario>
           </Stack>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

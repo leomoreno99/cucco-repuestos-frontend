@@ -23,6 +23,12 @@ const useStyle = makeStyles({
     marginTop:"10px",
     color:"text.secondary",
     textDecoration:"line-through" 
+  },
+  cardHover:{
+    "&:hover": {
+      boxShadow: "0px 10px 10px rgb(0 0 0 / 20%);",
+      cursor: "pointer"
+    }
   }
 
 })
@@ -32,7 +38,7 @@ export default function TarjetaOferta() {
   const classes = useStyle();
   
   return (
-    <Card sx={{ maxWidth: 345, mb:"80px" }}>
+    <Card className={classes.cardHover} sx={{ maxWidth: 345, mb:"80px" }}>
       <CardMedia component="img" height="250" image={img} alt="volante-corona" />
       <CardContent align="left">
       <Typography p="3px" borderRadius="4px" align="left" variant="button" color="white"  backgroundColor="red">

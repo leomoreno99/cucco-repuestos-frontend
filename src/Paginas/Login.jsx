@@ -15,8 +15,11 @@ import IconButton from "@mui/material/IconButton";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import * as React from "react";
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import BotonPrimario from "../Componentes/BotonPrimario";
+
+
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -51,7 +54,11 @@ const Login = () => {
     <>
       <div>
         <Grid container style={{ minHeigth: "100vh" }}>
-          <Grid container Item xs={12} sm={6}
+          <Grid
+            container
+            Item
+            xs={12}
+            sm={6}
             alignItems="center"
             direction="column"
             justify="space-between"
@@ -69,24 +76,28 @@ const Login = () => {
                   flexDirection: "column",
                   maxWidth: 400,
                   minWidth: 300,
-                  marginTop: "20%",
+                  marginTop: "60%",
                 }}
               >
-                <label >Bienvenido</label>
-                <h3  style={{ marginTop:"5px"}} 
-                >Iniciar sesion</h3>
+                <label>Bienvenido</label>
+                <h3 style={{ marginTop: "5px" }}>Iniciar sesion</h3>
 
-              
-                <TextField color="error" label="Email"
+                <TextField
+                  color="error"
+                  label="Email"
                   style={{
-                    marginTop:"20px",
-                    marginBottom: "15px"
+                    marginTop: "20px",
+                    marginBottom: "15px",
                   }}
                 />
 
-                <FormControl   color="error" sx={{ width: "100%" }} variant="outlined">
+                <FormControl
+                  color="error"
+                  sx={{ width: "100%" }}
+                  variant="outlined"
+                >
                   <InputLabel htmlFor="outlined-adornment-password">
-                   Contraseña
+                    Contraseña
                   </InputLabel>
                   <OutlinedInput
                     id="outlined-adornment-password"
@@ -110,21 +121,19 @@ const Login = () => {
                       </InputAdornment>
                     }
                     label="Password"
-                   
                   />
-                   <FormControlLabel  style={{fontSize:'10px !important'}} control={<Checkbox defaultChecked  size="small" color="secondary"/>} 
-                   label="Recordar contraseña" />
+                  <FormControlLabel
+                    style={{ fontSize: "10px !important" }}
+                    control={
+                      <Checkbox defaultChecked size="small" color="secondary" />
+                    }
+                    label="Recordar contraseña"
+                  />
                 </FormControl>
 
                 <div style={{ height: 20 }} />
 
-                <Button color="secondary" variant="contained"  
-                style={{
-                    height: 46,
-                    paddingTop:8,
-                }} >
-                  Ingresar
-                </Button>
+                <BotonPrimario texto="Ingresar"></BotonPrimario>
 
                 <div style={{ height: 20 }} />
                 {/* <Button color="secondary" variant="outlined"
@@ -138,45 +147,50 @@ const Login = () => {
             </div>
 
             <div>
-              <Grid container justify="center" spacing={0.45}
+              <Grid
+                container
+                justify="center"
+                spacing={0.45}
                 style={{
                   marginTop: 25,
                   justify: "center",
-                
-                }} >
-             
+                }}
+              >
                 <Grid item>
                   <Button
                     style={{
                       color: "black",
-                      cursor:"none",
-                      fontSize: 10
-                      
-                    }} >
+                      cursor: "none",
+                      fontSize: 10,
+                    }}
+                  >
                     ¿No tienes una cuenta?
                   </Button>
                 </Grid>
 
                 <Grid item>
-                  <Button   style={{
-                     color:"#F44336",
-                     fontSize: 10 
-                   }}>
-                    Crear una cuenta</Button>    
+                  <Button
+                    style={{
+                      color: "#F44336",
+                      fontSize: 10,
+                    }}
+                  >
+                    Crear una cuenta
+                  </Button>
                 </Grid>
-
               </Grid>
             </div>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <img src={img4}
+            <img
+              src={img4}
               style={{
                 width: "100%",
                 height: "100vh",
                 objectFit: "cover",
               }}
-              alt="foto" />
-          
+              alt="foto"
+            />
           </Grid>
         </Grid>
       </div>
@@ -185,4 +199,3 @@ const Login = () => {
 };
 
 export default Login;
-
