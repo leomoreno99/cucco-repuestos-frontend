@@ -10,7 +10,7 @@ import img from "../img/volante-corona.jpg";
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { makeStyles } from '@mui/styles';
-
+import { Link } from "react-router-dom";
 
 const useStyle = makeStyles({
   cardA: {
@@ -23,30 +23,50 @@ const useStyle = makeStyles({
       cursor: "pointer"
 
     }
+  },
+  decorationText:{
+    textDecoration: "none"
   }
 })
 
-export default function TarjetaProducto() {
+export default function TarjetaProducto(props) {
 
   const classes = useStyle();
 
+
+  // this.state={
+  //   descripcion : props.descripcion,
+  //   precio : props.precio
+  // }
+
+  // const redirigir = () => {
+
+  //   <Link to={`/pokemon/${id}`}>See more</Link>
+
+  //   // window.location.href = "/producto"
+  // }
+
   return (
     <Card className={classes.cardHover} sx={{ maxWidth: 345, mb: "80px" }}>
+      <Link to={`/producto/${props.id}`}>
       <CardMedia
         component="img"
         height="250"
         image={img}
         alt="volante-corona"
-        onClick={()=>{window.location.href = "/producto"}} 
+        // onClick={redirigir()} 
       />
-      <CardContent onClick={()=>{window.location.href = "/producto"}} >
+      </Link>
+      <Link className={classes.decorationText} to={`/producto/${props.id}`}>
+      <CardContent >
         <Typography align="left" variant="body2" color="text.secondary">
-          Volante motor con corona
+          {props.descripcion}
         </Typography>
         <Typography align="left" variant="h5" color="black">
-          $3500.00
+          {props.precio}
         </Typography>
       </CardContent>
+      </Link>
       <CardActions className={classes.cardA} >
       <Stack spacing={1}>
           <Rating name="half-rating" defaultValue={2.5} precision={0.5} size="small" readOnly />

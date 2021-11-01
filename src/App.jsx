@@ -6,6 +6,7 @@ import theme from './temaConfig';
 import Nosotros from './Paginas/Nosotros';
 import  Login  from './Paginas/Login';
 import Producto from './Paginas/Producto';
+import CrearCuenta from './Paginas/CrearCuenta';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <Switch>
       
 
-      <Route path="/nosotros">
+      <Route path="/nosotros/:id">
         <Nosotros />
       </Route>
 
@@ -26,6 +27,10 @@ function App() {
 
       <Route path="/producto">
         <Producto/>
+      </Route>
+
+      <Route path="/signup">
+        <CrearCuenta/>
       </Route>
 
       <Route path="/">

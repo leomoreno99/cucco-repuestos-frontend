@@ -40,7 +40,7 @@ const GrillaProductos = () => {
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <Item>
-              <TarjetaProducto />
+              <TarjetaProducto id={54} descripcion="Volante motor con corona" precio="$3500.00" />
             </Item>
           </Grid>
           <Grid item xs={3}>

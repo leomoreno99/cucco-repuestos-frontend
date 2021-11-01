@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import { spacing } from "@mui/system";
+import { spacing, typography } from "@mui/system";
 import { InputAdornment, Typography } from "@mui/material";
 import img4 from "../img/imgLogin.jpg";
 import img5 from "../img/logo-blanco.png";
@@ -18,7 +18,7 @@ import * as React from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import BotonPrimario from "../Componentes/BotonPrimario";
-
+import Link from '@mui/material/Link';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -157,26 +157,11 @@ const Login = () => {
                 }}
               >
                 <Grid item>
-                  <Button
-                    style={{
-                      color: "black",
-                      cursor: "none",
-                      fontSize: 10,
-                    }}
-                  >
-                    ¿No tienes una cuenta?
-                  </Button>
+                  <Typography variant="body1" mr="10px">¿No tienes una cuenta?</Typography>
                 </Grid>
 
                 <Grid item>
-                  <Button
-                    style={{
-                      color: "#F44336",
-                      fontSize: 10,
-                    }}
-                  >
-                    Crear una cuenta
-                  </Button>
+                  <Link href="/signup" color="secondary" >Crear una cuenta</Link>
                 </Grid>
               </Grid>
             </div>

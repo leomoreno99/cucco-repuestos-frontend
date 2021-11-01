@@ -24,7 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
-export default function ComprarProducto() {
+export default function ComprarProducto(props) {
 
     const classes = useStyle();
 
@@ -38,10 +38,10 @@ export default function ComprarProducto() {
       <Grid item xs={6}>
         <Item>
             <Box component="div" pl="35px" pt="20%" pr="200px">
-                <Typography variant="h4" color="black" textAlign="left">Volante motor con corona</Typography>
+                <Typography variant="h4" color="black" textAlign="left">{props.nombre}</Typography>
                 <Typography variant="subtitle2" color="black" textAlign="left" mt="3%">Descripcion</Typography>
-                <Typography variant="body1" color="black" textAlign="left">M.Benz 1114 Motor OM-352 Placa Ø 280 m.m.(Corona Ancha) Con corona</Typography>
-                <Typography variant="h3" color="black" textAlign="left" mt="10%" fontWeight="500">$3500.00</Typography>
+                <Typography variant="body1" color="black" textAlign="left">{props.descripcion}</Typography>
+                <Typography variant="h3" color="black" textAlign="left" mt="10%" fontWeight="500">{props.precio}</Typography>
                 
                 <Grid
                     height="120px"
