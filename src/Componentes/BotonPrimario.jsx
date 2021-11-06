@@ -5,6 +5,7 @@ const BotonPrimario = (props) => {
     <Button
       color="secondary"
       variant="contained"
+      href={props.href}
       style={{
         height: 46,
         paddingTop: 6,

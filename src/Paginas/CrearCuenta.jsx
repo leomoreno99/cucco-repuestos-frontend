@@ -9,7 +9,10 @@ import img4 from "../img/clienteComputadora.png";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import FormDP from "../Componentes/FormDP";
-
+import FormCrearCuenta from "../Componentes/FormCrearCuenta";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { ThemeProvider } from '@emotion/react';
+import theme from '../temaConfig';
 
 const useStyle = makeStyles({
   banner: {
@@ -17,14 +20,8 @@ const useStyle = makeStyles({
   },
 });
 
-
-
-
-
 export default function CrearCuenta() {
   const classes = useStyle();
-
-  
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -56,10 +53,23 @@ export default function CrearCuenta() {
         </Grid>
         <Grid item xs={8}>
           <Box component="div" m="5%">
-            <Typography variant="h4" fontWeight="500">
-              Crea tu cuenta
-            </Typography>
-            <FormDP/>
+            <ThemeProvider theme={theme}>
+              <BrowserRouter>
+                <Switch>
+                  <Route path="/signup/paso1">
+                    <FormCrearCuenta />
+                  </Route>
+
+                  <Route path="/signup/paso2">
+                    <FormDP />
+                  </Route>
+
+                </Switch>
+              </BrowserRouter>
+            </ThemeProvider>
+
+            {/* <FormCrearCuenta/> */}
+            {/* <FormDP/> */}
           </Box>
         </Grid>
       </Grid>

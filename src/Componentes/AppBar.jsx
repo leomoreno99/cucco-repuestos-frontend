@@ -205,8 +205,8 @@ export default function NavBar() {
           </Box>
 
           <Stack direction="row" spacing={2}>
-          <BotonSecundario texto="Nosotros" alto="39px"></BotonSecundario>
-          <BotonSecundario texto="Iniciar sesión" alto="39px"></BotonSecundario>
+          <BotonSecundario href="/nosotros" texto="Nosotros" alto="39px"></BotonSecundario>
+          <BotonSecundario href="/login" texto="Iniciar sesión" alto="39px"></BotonSecundario>
           </Stack>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

@@ -161,7 +161,7 @@ const Login = () => {
                 </Grid>
 
                 <Grid item>
-                  <Link href="/signup" color="secondary" >Crear una cuenta</Link>
+                  <Link href="/signup/paso1" color="secondary" >Crear una cuenta</Link>
                 </Grid>
               </Grid>
             </div>

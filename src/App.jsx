@@ -17,7 +17,7 @@ function App() {
     <Switch>
       
 
-      <Route path="/nosotros/:id">
+      <Route path="/nosotros">
         <Nosotros />
       </Route>
 
@@ -25,7 +25,7 @@ function App() {
         <Login/>
       </Route>
 
-      <Route path="/producto">
+      <Route path="/producto/:id">
         <Producto/>
       </Route>
 

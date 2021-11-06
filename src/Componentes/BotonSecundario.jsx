@@ -5,6 +5,7 @@ const BotonSecundario = (props) => {
     <Button
       color="secondary"
       variant="outlined"
+      href={props.href}
       style={{
         height: props.alto,
         paddingTop: 6,
