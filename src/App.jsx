@@ -34,8 +34,8 @@ function App() {
         <CrearCuenta/>
       </Route>
 
-      <Route path="/carrito">
-        <Carrito/>
+      <Route  path="/carrito">
+       <Carrito/>
       </Route>
 
 

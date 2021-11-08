@@ -12,6 +12,7 @@ import img3 from "../img/nosotros3.png";
 import { Typography } from "@mui/material";
 import ProdCarrito from "../Componentes/ProdCarrito";
 
+
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: "none",
@@ -27,8 +28,11 @@ const Carrito = () => {
       <Categorias />
       <Box sx={{ flexGrow: 1 }}>
 
+      
+
       <Grid container spacing={1}>
-        <Grid item xs={12}  >
+     
+        <Grid item xs={12}>
           <Item> 
             <ProdCarrito/>
           </Item>

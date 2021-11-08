@@ -7,6 +7,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import BotonPrimario from "./BotonPrimario";
 import BotonSecundario from "./BotonSecundario";
+import Link from "@mui/material/Link";
 
 const useStyle = makeStyles({
   img: {
@@ -31,32 +32,35 @@ export default function ProdCarrito(props) {
   return (
     <Grid container spacing={0}  >
         {/* <Grid  justify="center" > */}
+        <Typography display="inline" align="left" variant="h4" color="black">
+        Carrito
+            <Link
+            underline="hover"
+            color="secondary"
+            // href="#"
+            align="left"
+            >
+        </Link>
+      </Typography>
              <Grid item xs={2} height="195px" 
-             style={{boxShadow:"none !important",}}
+             style={{marginTop:50, marginBottom:4, flexGrow: 1 }}
              >
                 <Item>
                   <img src={img1} className={classes.img}/>
                 </Item>
             {/* </Grid> */}
         </Grid>
+      
      
       <Grid item xs={5}>
+      
       <Item>
-            <Box component="div" pl="10px" pt="2%" pr="200px">
+            <Box component="div" pl="10px" pt="8.9%" pr="200px">
                 <Typography  style={{fontSize:"25px"}}variant="h4" color="black" textAlign="left">Volante motor con corona</Typography>
                 <Typography  style={{fontSize:"18px", fontWeight:"bold"}} variant="subtitle2" color="black" textAlign="left" pl="3px" mt="5%">Descripcion</Typography>
-                <Typography variant="body1" color="black"  pl="3px"  textAlign="left"> M.Benz 1114 Motor OM-352 Placa Ø 280 m.m.(Corona Ancha) Con corona </Typography>
-                
-                {/* <ul>
-                    <li>Eliminar</li>
-                    <li><a>Comrar ahora</a></li>
-                </ul> */}
-      
+                <Typography variant="body1" color="black"  pl="3px"  textAlign="left"> M.Benz 1114 Motor OM-352 Placa Ø 280 m.m.(Corona Ancha) Con corona </Typography>  
             </Box>
         </Item>
-            
-    
-
       </Grid>   
        
 
@@ -65,7 +69,6 @@ export default function ProdCarrito(props) {
                 <Item>
                   <img src={img1} className={classes.img}/>
                 </Item>
-            {/* </Grid> */}
         </Grid>
 
 
