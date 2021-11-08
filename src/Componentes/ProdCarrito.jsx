@@ -8,6 +8,7 @@ import { Box } from "@mui/system";
 import BotonPrimario from "./BotonPrimario";
 import BotonSecundario from "./BotonSecundario";
 import Link from "@mui/material/Link";
+import cantidadProd from "./cantidadProd";
 
 const useStyle = makeStyles({
   img: {
@@ -32,17 +33,17 @@ export default function ProdCarrito(props) {
   return (
     <Grid container spacing={0}  >
         {/* <Grid  justify="center" > */}
-        <Typography display="inline" align="left" variant="h4" color="black">
+        {/* <Typography display="inline" align="left" variant="h4" color="black">
         Carrito
             <Link
             underline="hover"
             color="secondary"
-            // href="#"
+            href="#"
             align="left"
-            >
+            > 
         </Link>
-      </Typography>
-             <Grid item xs={2} height="195px" 
+      </Typography>*/}
+             <Grid item xs={3} height="195px" 
              style={{marginTop:50, marginBottom:4, flexGrow: 1 }}
              >
                 <Item>
@@ -52,10 +53,10 @@ export default function ProdCarrito(props) {
         </Grid>
       
      
-      <Grid item xs={5}>
+      <Grid item xs={3}>
       
       <Item>
-            <Box component="div" pl="10px" pt="8.9%" pr="200px">
+            <Box>
                 <Typography  style={{fontSize:"25px"}}variant="h4" color="black" textAlign="left">Volante motor con corona</Typography>
                 <Typography  style={{fontSize:"18px", fontWeight:"bold"}} variant="subtitle2" color="black" textAlign="left" pl="3px" mt="5%">Descripcion</Typography>
                 <Typography variant="body1" color="black"  pl="3px"  textAlign="left"> M.Benz 1114 Motor OM-352 Placa Ø 280 m.m.(Corona Ancha) Con corona </Typography>  
@@ -65,16 +66,24 @@ export default function ProdCarrito(props) {
        
 
 
-      <Grid item xs={3} height="195px">
-                <Item>
-                  <img src={img1} className={classes.img}/>
-                </Item>
-        </Grid>
+     <Grid item xs={3}  style={{
+        marginTop:50, marginBottom:4, flexGrow: 1 
+      }}>
+                 <Item>
+                {/* <cantidadProd/> */}
+                </Item> 
+      </Grid> 
 
+      <Grid item xs={2}>
+        <Item>
+            <Typography variant="h4" color="black"   >$4580</Typography>
+                </Item> 
+       
+      </Grid> 
 
-
-         
+   
       </Grid>
+      
     
   );
 }

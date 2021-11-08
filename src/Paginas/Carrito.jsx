@@ -37,47 +37,19 @@ const Carrito = () => {
             <ProdCarrito/>
           </Item>
         </Grid>
-        {/* <Grid item xs={3}  >
-          <Item>xs=3</Item>
+
+        <Grid item xs={12}>
+          <Item> 
+            <ProdCarrito/>
+          </Item>
         </Grid>
-        <Grid item xs={3}  >
-          <Item>xs=3</Item>
-        </Grid>
-        <Grid item xs={3}  >
-          <Item>xs=3</Item>
-        </Grid>
-        */}
+
+
+
       </Grid> 
     </Box>
   
-
-{/*        
-        <Grid container>
-          <Grid item xs={6}>
-           
-          </Grid>
-          <Grid item xs={6}>
-            
-          </Grid>
-          <Grid item xs={6}>
-           
-          </Grid>
-          <Grid item xs={6}>
-             
-          </Grid>
-          <Grid item xs={6}>
-             
-          </Grid>
-          <Grid item xs={6}>
-           
-          </Grid>
-        
-   
-       
-          </Grid>
-*/}
-       
-      <Footer />
+    <Footer />
     </>
   );
 }
