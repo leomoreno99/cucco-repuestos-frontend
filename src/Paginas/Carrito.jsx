@@ -34,13 +34,13 @@ const Carrito = () => {
      
         <Grid item xs={12}>
           <Item> 
-            <ProdCarrito/>
+            <ProdCarrito  nombre="Volante Motor Con Corona" descripcion="M.Benz 1114 Motor OM-352 Placa Ø 280 m.m.(Corona Ancha) Con corona" precio="$3500.00" />
           </Item>
         </Grid>
 
         <Grid item xs={12}>
           <Item> 
-            <ProdCarrito/>
+            <ProdCarrito   nombre="Kit Discos Y Pastillas De Freno" descripcion="Renault Duster 2.0 Fluence Megane 3" precio="$5000.00"/>
           </Item>
         </Grid>
 

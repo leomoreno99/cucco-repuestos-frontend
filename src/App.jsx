@@ -10,6 +10,8 @@ import CrearCuenta from './Paginas/CrearCuenta';
 import Carrito from './Paginas/Carrito';
 
 
+
+
 function App() {
 
   return (
@@ -37,7 +39,6 @@ function App() {
       <Route  path="/carrito">
        <Carrito/>
       </Route>
-
 
       <Route path="/">
         <Inicio />

@@ -31,7 +31,11 @@ export default function ProdCarrito(props) {
     const classes = useStyle();
 
   return (
-    <Grid container spacing={0}  >
+    <Grid container spacing={0}  style={{
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center"
+    }}   >
         {/* <Grid  justify="center" > */}
         {/* <Typography display="inline" align="left" variant="h4" color="black">
         Carrito
@@ -57,9 +61,9 @@ export default function ProdCarrito(props) {
       
       <Item>
             <Box>
-                <Typography  style={{fontSize:"25px"}}variant="h4" color="black" textAlign="left">Volante motor con corona</Typography>
+                <Typography  style={{fontSize:"25px"}}variant="h4" color="black" textAlign="left">{props.nombre}</Typography>
                 <Typography  style={{fontSize:"18px", fontWeight:"bold"}} variant="subtitle2" color="black" textAlign="left" pl="3px" mt="5%">Descripcion</Typography>
-                <Typography variant="body1" color="black"  pl="3px"  textAlign="left"> M.Benz 1114 Motor OM-352 Placa Ø 280 m.m.(Corona Ancha) Con corona </Typography>  
+                <Typography variant="body1" color="black"  pl="3px"  textAlign="left">{props.descripcion} </Typography>  
             </Box>
         </Item>
       </Grid>   
@@ -76,7 +80,7 @@ export default function ProdCarrito(props) {
 
       <Grid item xs={2}>
         <Item>
-            <Typography variant="h4" color="black"   >$4580</Typography>
+            <Typography variant="h4" color="black"   > {props.precio}  </Typography>
                 </Item> 
        
       </Grid> 
