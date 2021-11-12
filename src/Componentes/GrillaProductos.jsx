@@ -6,6 +6,7 @@ import TarjetaProducto from "./TarjetaProducto";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 
+
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: "none",
@@ -40,6 +41,7 @@ const GrillaProductos = () => {
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <Item>
+            
               <TarjetaProducto id={54} descripcion="Volante motor con corona" precio="$3500.00" />
             </Item>
           </Grid>
