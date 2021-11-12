@@ -6,6 +6,7 @@ const BotonPrimario = (props) => {
       color="secondary"
       variant="contained"
       href={props.href}
+      onClick={()=>{props.funcionOnClick()}}
       style={{
         height: 46,
         paddingTop: 6,
