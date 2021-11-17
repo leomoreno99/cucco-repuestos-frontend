@@ -68,17 +68,17 @@ const Login = () => {
         });
 
         if (request.status === 200) {
-        let resTokenJson     = await request.json();
-        
-        localStorage.setItem("token", JSON.stringify(resTokenJson.token));
-        localStorage.setItem("id_usuario",resTokenJson.id_usuario);
-        
-        window.location.href = "http://localhost:3000/";
+          let resTokenJson     = await request.json();
+          
+          localStorage.setItem("token", JSON.stringify(resTokenJson.token));
+          localStorage.setItem("id_usuario",resTokenJson.id);
+          
+          window.location.href = "http://localhost:3000/";
             
         } else if(request.status === 401){
           console.log("Contraseña incorrecta");
         } else {
-        console.log("Usuario no encontrado");
+          console.log("Usuario no encontrado");
         }
   }
 

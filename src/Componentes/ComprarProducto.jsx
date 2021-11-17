@@ -73,25 +73,43 @@ export default function ComprarProducto(props) {
     } else {
         console.log("Error al obtener datos del cliente");
     }
-}
+  }
 
-const obtenerProductoId = async () => {
+  const obtenerProductoId = async () => {
 
-  let url                 = `http://localhost:4000/products/searchById/${props.id}`;
-  let request             = await fetch(url, {
-    method  : "GET",
-    headers : {
-        'Authorization' : localstorage_token
+    let url                 = `http://localhost:4000/products/searchById/${props.id}`;
+    let request             = await fetch(url, {
+      method  : "GET",
+      headers : {
+          'Authorization' : localstorage_token
+      }
+      
+  });
+      if (request.status === 200) {
+        producto =  await request.json();
+        producto = producto.producto
+    } else {
+        console.log("Error al obtener datos del producto");
     }
-});
+  }
 
-if (request.status === 200) {
-    producto =  await request.json();
-    producto = producto.producto
-} else {
-    console.log("Error al obtener datos del producto");
-}
-}
+  const comprarMercadoPago = async () => {
+
+  let url = "http://localhost:4000/comprar-mercadopago";
+
+        let request = await fetch(url, {
+          method       : "POST",
+          body: new URLSearchParams({
+              usuario    : JSON.stringify(usuario),
+              cliente : JSON.stringify(cliente),
+              producto : JSON.stringify(producto)
+          }),
+        });
+          let res = await request.json();
+          if(res){
+            window.location.href = res.body.init_point
+          }
+  }
 
 
   const comprarProducto = async () => {
@@ -101,6 +119,8 @@ if (request.status === 200) {
     await console.log(usuario)
     await console.log(cliente)
     await console.log(producto)
+    await comprarMercadoPago()
+    
   }
 
 

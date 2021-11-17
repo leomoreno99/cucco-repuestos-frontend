@@ -8,8 +8,7 @@ import  Login  from './Paginas/Login';
 import Producto from './Paginas/Producto';
 import CrearCuenta from './Paginas/CrearCuenta';
 import Carrito from './Paginas/Carrito';
-
-
+import Agradecimiento from './Paginas/Agradecimiento';
 
 
 function App() {
@@ -38,6 +37,10 @@ function App() {
 
       <Route  path="/carrito">
        <Carrito/>
+      </Route>
+
+      <Route  path="/gracias">
+       <Agradecimiento/>
       </Route>
 
       <Route path="/">

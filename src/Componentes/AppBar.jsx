@@ -17,7 +17,11 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Button, Stack } from "@mui/material";
 import BotonSecundario from "./BotonSecundario";
+import { useEffect } from "react";
 
+
+
+let localstorage_token    = JSON.parse(localStorage.getItem("token"));
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -61,8 +65,38 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
+
+  useEffect(() => {
+    onChangeTexto()
+  }, []);
+
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  const [texto, setTexto] = React.useState("Iniciar sesión");
+  const [sesion, setSesion] = React.useState("#");
+
+  const onChangeTexto = () => {
+    
+    if ((localstorage_token == null) || (localstorage_token == undefined)){
+      setTexto("Iniciar sesión")
+    }else{
+      setTexto("Cerrar sesión")
+    }
+    
+  }
+
+
+  const estadoSesion = () => {
+    if ((localstorage_token == null) || (localstorage_token == undefined)){
+
+      setSesion("/login")
+    }else{
+      localStorage.clear()
+      setSesion("/")
+    }
+  }
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -206,7 +240,7 @@ export default function NavBar() {
 
           <Stack direction="row" spacing={2}>
           <BotonSecundario href="/nosotros" texto="Nosotros" alto="39px"></BotonSecundario>
-          <BotonSecundario href="/login" texto="Iniciar sesión" alto="39px"></BotonSecundario>
+          <BotonSecundario href={sesion} funcionOnClick={estadoSesion} texto={texto} alto="39px"></BotonSecundario>
           </Stack>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

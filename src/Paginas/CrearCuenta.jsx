@@ -44,7 +44,7 @@ export default function CrearCuenta() {
               p="10%"
               pt="0px"
             >
-              Estás a unos pocos clics de crear tu cuenta.
+              Estás a unos pocos clicks de crear tu cuenta.
             </Typography>
             <Box component="div" m="10%">
               <img src={img4} width="100%" />
