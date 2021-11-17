@@ -20,6 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Producto = () => {
 
   let {id} = useParams()
+  localStorage.setItem("id_producto", id);
 
   const [producto, setProducto] = useState([]);
 
