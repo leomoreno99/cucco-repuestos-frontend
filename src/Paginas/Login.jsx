@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import { spacing, typography } from "@mui/system";
 import { InputAdornment, Typography } from "@mui/material";
 import img4 from "../img/imgLogin.jpg";
-import img5 from "../img/logo-blanco.png";
+import img5 from "../img/cuccoR.png";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";

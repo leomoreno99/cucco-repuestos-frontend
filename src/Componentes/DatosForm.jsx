@@ -7,8 +7,6 @@ import { Typography } from "@mui/material";
 
 
 
-
-
 const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -25,6 +23,8 @@ const Alert = forwardRef(function Alert(props, ref) {
       return (
         // <div className="contact">
           <form onSubmit={handleSubmit}>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
+
             <Typography variant="h6" fontWeight="500" align="left" style={{ marginBottom:"15px"}} >
               Dejanos un mensaje
             </Typography>

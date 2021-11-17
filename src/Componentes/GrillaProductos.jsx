@@ -51,7 +51,7 @@ const GrillaProductos = () => {
     >
       <Typography display="inline" align="left" variant="h4" color="black">
         Productos
-        <Link underline="hover" color="secondary" href="#" align="left">
+        <Link underline="hover" color="secondary" href="/todos" align="left">
           <Typography display="inline"> Ver todos</Typography>
         </Link>
       </Typography>

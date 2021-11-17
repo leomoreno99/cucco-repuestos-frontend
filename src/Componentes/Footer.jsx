@@ -1,7 +1,7 @@
 import { AppBar, Container, Grid, IconButton, Toolbar } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import img1 from "../img/logo-blanco.png";
+import img1 from "../img/cuccoB.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -15,7 +15,7 @@ export default function Footer() {
         <Toolbar
           sx={{ justifyContent: "center", mt: "80px", flexDirection: "column" }}
         >
-          <Typography
+          {/* <Typography
             align="center"
             display="block"
             variant="h4"
@@ -23,8 +23,8 @@ export default function Footer() {
             fontFamily="Verdana"
           >
             Cucco Repuestos
-          </Typography>
-          {/* <img src={img1}></img> */}
+          </Typography> */}
+          <img src={img1} width="12%"></img>
           <Grid
             height="120px"
             container
@@ -41,7 +41,7 @@ export default function Footer() {
             <Link underline="hover" color="white" href="#" align="left">
               <Typography fontSize="20px"     display="inline"> Donde estamos</Typography>
             </Link>
-            <Link underline="hover" color="white" href="#" align="left">
+            <Link href="/contacto" underline="hover" color="white" align="left">
               <Typography  fontSize="20px"  display="inline"> Contacto</Typography>
             </Link>
           </Grid>

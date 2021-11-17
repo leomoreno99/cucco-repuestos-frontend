@@ -18,6 +18,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Button, Stack } from "@mui/material";
 import BotonSecundario from "./BotonSecundario";
 import { useEffect } from "react";
+import img1 from "../img/cuccoR.png";
 
 
 
@@ -195,8 +196,8 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <IconButton
+         <Toolbar>
+          {/*<IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -210,7 +211,8 @@ export default function NavBar() {
             sx={{ display: { xs: "none", sm: "block" } }}
           >
             Cucco repuestos
-          </Typography>
+          </Typography> */}
+          <a style={{width:"5%"}} href="http://localhost:3000/"><img src={img1} width="100%"></img></a>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
