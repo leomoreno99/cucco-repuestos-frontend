@@ -29,6 +29,8 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
+
 const Login = () => {
   const [values, setValues] = React.useState({
     password: "",
@@ -48,6 +50,42 @@ const Login = () => {
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
+  };
+
+  const iniciarSesion = async () => {
+
+    // console.log(values.password)
+    // console.log(usuario)
+
+    let url = "http://localhost:4000/user/login";
+
+        let request = await fetch(url, {
+          method       : "POST",
+          body: new URLSearchParams({
+              usuario    : usuario,
+              contrasenia : values.password,
+          }),
+        });
+
+        if (request.status === 200) {
+        let resTokenJson     = await request.json();
+        
+        localStorage.setItem("token", JSON.stringify(resTokenJson.token));
+        localStorage.setItem("id_usuario",resTokenJson.id_usuario);
+        
+        window.location.href = "http://localhost:3000/";
+            
+        } else if(request.status === 401){
+          console.log("Contraseña incorrecta");
+        } else {
+        console.log("Usuario no encontrado");
+        }
+  }
+
+  const [usuario, setUsuario] = React.useState("")
+
+  const onChangeUsuario = (event) => {
+    setUsuario(event.target.value);
   };
 
   return (
@@ -85,6 +123,7 @@ const Login = () => {
                 <TextField
                   color="error"
                   label="Email"
+                  onChange={onChangeUsuario}
                   style={{
                     marginTop: "20px",
                     marginBottom: "15px",
@@ -95,6 +134,7 @@ const Login = () => {
                   color="error"
                   sx={{ width: "100%" }}
                   variant="outlined"
+                  
                 >
                   <InputLabel htmlFor="outlined-adornment-password">
                     Contraseña
@@ -133,7 +173,7 @@ const Login = () => {
 
                 <div style={{ height: 20 }} />
 
-                <BotonPrimario texto="Ingresar"></BotonPrimario>
+                <BotonPrimario funcionOnClick={iniciarSesion} texto="Ingresar"></BotonPrimario>
 
                 <div style={{ height: 20 }} />
                 {/* <Button color="secondary" variant="outlined"
