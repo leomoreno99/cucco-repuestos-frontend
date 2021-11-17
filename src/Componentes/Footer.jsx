@@ -5,6 +5,8 @@ import img1 from "../img/logo-blanco.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Box from "@mui/material/Box";
+
 
 export default function Footer() {
   return (
@@ -18,6 +20,7 @@ export default function Footer() {
             display="block"
             variant="h4"
             color="inherit"
+            fontFamily="Verdana"
           >
             Cucco Repuestos
           </Typography>
@@ -30,16 +33,16 @@ export default function Footer() {
             alignItems="flex-end"
           >
             <Link underline="hover" color="white" href="#" align="left">
-              <Typography display="inline"> Nosotros</Typography>
+              <Typography fontSize="20px"     display="inline"> Nosotros</Typography>
             </Link>
             <Link underline="hover" color="white" href="#" align="left">
-              <Typography display="inline"> Ayuda</Typography>
+              <Typography fontSize="20px"     display="inline"> Ayuda</Typography>
             </Link>
             <Link underline="hover" color="white" href="#" align="left">
-              <Typography display="inline"> Donde estamos</Typography>
+              <Typography fontSize="20px"     display="inline"> Donde estamos</Typography>
             </Link>
             <Link underline="hover" color="white" href="#" align="left">
-              <Typography display="inline"> Contacto</Typography>
+              <Typography  fontSize="20px"  display="inline"> Contacto</Typography>
             </Link>
           </Grid>
           <Grid
@@ -49,7 +52,11 @@ export default function Footer() {
             justifyContent="center"
             alignItems="flex-end"
           >
-            <Link underline="hover" color="white" href="#" align="left">
+           
+          
+
+           
+            <Link underline="hover" color="white" href="https://www.facebook.com/Cucco-Repuestos-1783408218424918/about" align="left">
               <IconButton aria-label="facebokIcon" color="primary">
                 <FacebookIcon />
               </IconButton>
@@ -64,6 +71,8 @@ export default function Footer() {
                 <InstagramIcon />
               </IconButton>
             </Link>
+           
+          
           </Grid>
         </Toolbar>
       </Container>

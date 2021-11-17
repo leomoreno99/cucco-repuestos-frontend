@@ -14,14 +14,14 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const GrillaProductos = () => {
+const GrillaProductosTodos = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
     obtenerProductos();
   }, []);
 
-  let productosInicio = [];
+  // let productosInicio = [];
 
   let resProd;
   const obtenerProductos = async () => {
@@ -30,13 +30,9 @@ const GrillaProductos = () => {
     let request = await fetch(url);
 
     resProd = await request.json();
+    setProductos(resProd)
 
-    for (let i = 0; i < 4; i++) {
-      productosInicio.push(resProd[i]);
-    }
 
-    setProductos(productosInicio);
-    console.log(productosInicio)
   };
 
   return (
@@ -51,9 +47,7 @@ const GrillaProductos = () => {
     >
       <Typography display="inline" align="left" variant="h4" color="black">
         Productos
-        <Link underline="hover" color="secondary" href="#" align="left">
-          <Typography display="inline"> Ver todos</Typography>
-        </Link>
+       
       </Typography>
 
       <Box sx={{ mt: 4, mb: 4, flexGrow: 1 }}>
@@ -78,4 +72,4 @@ const GrillaProductos = () => {
   );
 };
 
-export default GrillaProductos;
+export default GrillaProductosTodos;

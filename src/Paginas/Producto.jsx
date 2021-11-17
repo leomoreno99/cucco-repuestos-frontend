@@ -36,7 +36,7 @@ const Producto = () => {
     resProd = await request.json();
     
     setProducto(resProd.producto);
-    // console.log(producto)
+     console.log(producto)
   };
   
 

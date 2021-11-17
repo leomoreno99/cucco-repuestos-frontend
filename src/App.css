@@ -41,3 +41,27 @@
   box-shadow: none !important;
 }
 
+label{
+  display: flex !important;
+}
+
+.css-my2k1z-MuiPaper-root{
+  box-shadow: none !important;
+
+}
+
+
+.css-i4bv87-MuiSvgIcon-root  {
+    /* color:black; */
+    transition: .8s;
+}
+
+
+.css-i4bv87-MuiSvgIcon-root:hover  {
+  transform: translateY(-10px);
+  color: black;
+}
+
+
+
+

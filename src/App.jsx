@@ -8,13 +8,17 @@ import  Login  from './Paginas/Login';
 import Producto from './Paginas/Producto';
 import CrearCuenta from './Paginas/CrearCuenta';
 import Carrito from './Paginas/Carrito';
+import Contacto from './Paginas/Contacto';
+import ProductosT from './Paginas/ProductosT';
 
 
 
 
 function App() {
-
+  
   return (
+    
+   
     <ThemeProvider theme={theme}>
     <BrowserRouter>
     <Switch>
@@ -23,6 +27,7 @@ function App() {
       <Route path="/nosotros">
         <Nosotros />
       </Route>
+    
 
       <Route path="/login">
         <Login/>
@@ -39,6 +44,15 @@ function App() {
       <Route  path="/carrito">
        <Carrito/>
       </Route>
+
+      <Route  path="/contacto">
+       <Contacto/>
+      </Route>
+
+      <Route  path="/todos">
+       <ProductosT/>
+      </Route>
+
 
       <Route path="/">
         <Inicio />
