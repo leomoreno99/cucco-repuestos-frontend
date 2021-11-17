@@ -69,9 +69,9 @@ const Login = () => {
 
         if (request.status === 200) {
           let resTokenJson     = await request.json();
-          
+          console.log(resTokenJson)
           localStorage.setItem("token", JSON.stringify(resTokenJson.token));
-          localStorage.setItem("id_usuario",resTokenJson.id);
+          localStorage.setItem("id_usuario",resTokenJson.id_usuario);
           
           window.location.href = "http://localhost:3000/";
             
@@ -122,7 +122,7 @@ const Login = () => {
 
                 <TextField
                   color="error"
-                  label="Email"
+                  label="Usuario"
                   onChange={onChangeUsuario}
                   style={{
                     marginTop: "20px",

@@ -39,7 +39,8 @@ export default function ComprarProducto(props) {
     let producto
     
     const obtenerDatosUsuario = async () => {
-
+      console.log(localstorage_token)
+      console.log(localstorage_idUsuario)
       let url                 = `http://localhost:4000/user/${localstorage_idUsuario}`;
       let request             = await fetch(url, {
           method  : "GET",

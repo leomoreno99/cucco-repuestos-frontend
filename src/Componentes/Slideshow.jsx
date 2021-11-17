@@ -15,7 +15,7 @@ const Slideshow = ({
 
 	const siguiente = useCallback(() => {
 		// Comprobamos que el slideshow tenga elementos
-		console.log(slideshow)
+		
 		if(slideshow.current != null){
 			if(slideshow.current.children.length > 0){
 				// console.log('Siguiente')
@@ -47,7 +47,7 @@ const Slideshow = ({
 	
 			}
 		}else{
-			console.log("slideshow nulo")
+			// console.log("slideshow nulo")
 		}
 	}, [velocidad]);
 	
